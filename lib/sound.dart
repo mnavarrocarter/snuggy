@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 @immutable
 class SoundWidget extends StatefulWidget {
   final String title;
-  final IconData icon;
+  final String asset;
 
   const SoundWidget({
     required this.title,
-    required this.icon,
+    required this.asset,
     super.key
   });
 
@@ -27,10 +28,11 @@ class _SoundWidgetState extends State<SoundWidget> {
         children: <Widget>[
           GestureDetector(
             onTap: _onIconPressed,
-            child: Icon(
-              widget.icon,
-              color: _isActive ? Colors.indigo : Colors.black12,
-              size: 80,
+            child: SvgPicture.asset(
+              "assets/icons/${widget.asset}.svg",
+              color: _isActive ? Colors.indigo : Colors.black26,
+              width: 80,
+              height: 80,
             ),
           ),
           Text(widget.title),

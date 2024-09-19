@@ -93,17 +93,61 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSpacing: 10.0,
         children: const <Widget>[
           SoundWidget(
+            title: "Rain",
+            asset: "rain"
+          ),
+          SoundWidget(
+            title: "Storm",
+            asset: "storm"
+          ),
+          SoundWidget(
+            title: "Wind",
+            asset: "wind"
+          ),
+          SoundWidget(
+            title: "Waves",
+            asset: "waves"
+          ),
+          SoundWidget(
+            title: "Stream",
+            asset: "stream"
+          ),
+          SoundWidget(
+            title: "Birds",
+            asset: "birds"
+          ),
+          SoundWidget(
+            title: "Summer Night",
+            asset: "summer-night"
+          ),
+          SoundWidget(
+            title: "Train",
+            asset: "train"
+          ),
+          SoundWidget(
+            title: "Boat",
+            asset: "boat"
+          ),
+          SoundWidget(
             title: "City",
-            icon: Icons.location_city
+            asset: "city"
           ),
           SoundWidget(
-            icon: Icons.fireplace,
-            title: "Fireplace"
+            title: "Coffee Shop",
+            asset: "coffee-shop"
           ),
           SoundWidget(
-            icon: Icons.cloudy_snowing,
-            title: "Rain"
+            title: "Fireplace",
+            asset: "fireplace"
           ),
+          SoundWidget(
+            title: "Pink Noise",
+            asset: "pink-noise"
+          ),
+          SoundWidget(
+            title: "White Noise",
+            asset: "white-noise"
+          )
         ]
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

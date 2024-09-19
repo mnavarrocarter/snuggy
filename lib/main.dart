@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: GridView.count(
         crossAxisCount: 3,
-        crossAxisSpacing: 20.0,
+        crossAxisSpacing: 10.0,
         mainAxisSpacing: 10.0,
         children: const <Widget>[
           SoundWidget(

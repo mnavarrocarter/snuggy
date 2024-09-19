@@ -36,17 +36,17 @@ class _SoundWidgetState extends State<SoundWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+    return
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           GestureDetector(
             onTap: _onIconPressed,
             child: SvgPicture.asset(
               "assets/icons/${widget.asset}.svg",
               color: _isActive ? Colors.indigo : Colors.black26,
-              width: 80,
-              height: 80,
+              width: 62,
+              height: 62,
             ),
           ),
           Text(widget.title),
@@ -57,8 +57,7 @@ class _SoundWidgetState extends State<SoundWidget> {
             min: 0,
           )
         ],
-      ),
-    );
+      );
   }
 
   void _onVolumeChanged(double vol) {

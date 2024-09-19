@@ -46,6 +46,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  audioplayers: ^6.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,6 +61,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    # Icons
     - assets/icons/birds.svg
     - assets/icons/boat.svg
     - assets/icons/city.svg
@@ -75,6 +77,21 @@ flutter:
     - assets/icons/waves.svg
     - assets/icons/white-noise.svg
     - assets/icons/wind.svg
+  # Sounds
+    - assets/sounds/birds.ogg
+    - assets/sounds/boat.ogg
+    - assets/sounds/city.ogg
+    - assets/sounds/coffee-shop.ogg
+    - assets/sounds/fireplace.ogg
+    - assets/sounds/pink-noise.ogg
+    - assets/sounds/rain.ogg
+    - assets/sounds/storm.ogg
+    - assets/sounds/stream.ogg
+    - assets/sounds/summer-night.ogg
+    - assets/sounds/train.ogg
+    - assets/sounds/waves.ogg
+    - assets/sounds/white-noise.ogg
+    - assets/sounds/wind.ogg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

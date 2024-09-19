@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 @immutable
 class SoundWidget extends StatefulWidget {
@@ -17,8 +18,21 @@ class SoundWidget extends StatefulWidget {
 }
 
 class _SoundWidgetState extends State<SoundWidget> {
+  final AudioPlayer _player = AudioPlayer();
   bool _isActive = false;
   double _volume = 20;
+
+  @override
+  void initState() {
+    super.initState();
+    _player.setReleaseMode(ReleaseMode.loop);
+  }
+
+  @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +64,19 @@ class _SoundWidgetState extends State<SoundWidget> {
   void _onVolumeChanged(double vol) {
     setState(() {
       _volume = vol;
+      _player.setVolume(vol / 100);
     });
   }
 
   void _onIconPressed() {
     setState(() {
       _isActive = !_isActive;
+
+      if (_isActive) {
+        _player.play(AssetSource("sounds/${widget.asset}.ogg"), volume: _volume / 100);
+      } else {
+        _player.stop();
+      }
     });
   }
 }

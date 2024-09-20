@@ -158,11 +158,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-// I need a stateful widget that will take a file and play it.
-// The widget will be an icon, a text and a slider.
-// Pressing the icon will change the slider color and disable it.
-// Dragging the slider will add the sound to the main mix.
-// All wrapped in a center, and three columns.
-
-// Sounds are taken from: https://github.com/rafaelmardojai/blanket/tree/master/data/resources/sounds

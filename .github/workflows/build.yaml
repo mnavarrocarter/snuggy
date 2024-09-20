@@ -35,5 +35,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
-          name: snuggy-${{ github.event_name != 'pull_request' && 'main' || format('pr-', github.event.number) }}.apk
+          name: snuggy-${{ github.event_name != 'pull_request' && 'main' || format('pr-{0}', github.event.number) }}.apk
           path: build/app/outputs/flutter-apk/app-release.apk

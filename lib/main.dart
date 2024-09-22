@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: const <Widget>[
           SoundWidget(
             title: "Rain",
-            asset: "rain"
+            asset: "rain",
           ),
           SoundWidget(
             title: "Storm",
